@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Bubonja's - Menu</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS (for additional styling) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pizza.css') }}">
+
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* Custom styles for larger cards and background */
+        body {
+            background-color: #ffffff;
+        }
+        .menu-section {
+            max-height: 800px; /* Increased height */
+            overflow-y: auto;
+            padding: 20px;
+        }
+        .card {
+            max-width: 400px; /* Larger card width */
+            margin: auto;
+        }
+        .card img {
+            height: 180px; /* Larger image */
+            object-fit: cover;
+        }
+        .card-body {
+            font-size: 1rem; /* Larger text */
+        }
+        /* Scrollbar styling */
+        .menu-section::-webkit-scrollbar {
+            width: 8px;
+        }
+        .menu-section::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Pizza Bubonja's</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="livraison.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero bg-dark text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-3">Welcome to Pizza Bubonja's</h1>
+            <p class="lead">Serving great pizza from our family to yours</p>
+        </div>
+    </header>
+
+    <!-- Menu Section -->
+    <section class="container my-5 menu-section">
+        <h2 class="text-center mb-5">Our Delicious Pizzas</h2>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+            <!-- Primo Pizza -->
+            <div class="col">
+                <div class="card shadow-lg border-light rounded">
+                    <img src="{{ url_for('static', filename='img/pizza1.png') }}" class="card-img-top" alt="Primo Pizza">
+                    <div class="card-body">
+                        <h5 class="card-title">Primo</h5>
+                        <p class="card-text">Pepperoni, Italian sausage, mushroom, onion & green pepper</p>
+                        <div class="d-flex justify-content-between">
+                            <span class="text-muted">17.49dt (Medium)</span>
+                            <span class="text-muted">20.99dt (Large)</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3 w-100">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Milano Pizza -->
+            <div class="col">
+                <div class="card shadow-lg border-light rounded">
+                    <img src="{{ url_for('static', filename='img/pizza9.png') }}" class="card-img-top" alt="Milano Pizza">
+                    <div class="card-body">
+                        <h5 class="card-title">Milano</h5>
+                        <p class="card-text">Artichoke hearts, sun-dried tomatoes, roasted garlic, black olives, hot sausage, roasted eggplant</p>
+                        <div class="d-flex justify-content-between">
+                            <span class="text-muted">16.50$ (Medium)</span>
+                            <span class="text-muted">18.50$ (Large)</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3 w-100">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rome Pizza -->
+            <div class="col">
+                <div class="card shadow-lg border-light rounded">
+                    <img src="{{ url_for('static', filename='img/rome.jpg') }}" class="card-img-top" alt="Rome Pizza">
+                    <div class="card-body">
+                        <h5 class="card-title">Rome</h5>
+                        <p class="card-text">Pepperoni, hot sausage, onions, green peppers, mushrooms</p>
+                        <div class="d-flex justify-content-between">
+                            <span class="text-muted">16.50$ (Medium)</span>
+                            <span class="text-muted">18.50$ (Large)</span>
+                        </div>
+                        <a href="#" class="btn btn-primary mt-3 w-100">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Pizzas (only show 6 pizzas here) -->
+            <!-- Repeat this block for other pizzas -->
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>Contact us at <a href="mailto:sinisa.bubonja@gmail.com" class="text-white">sinisa.bubonja@gmail.com</a> for any inquiries.</p>
+            <p>DISCLAIMER: <em>Pizza Bubonja's</em> is a fictional website created for portfolio purposes.</p>
+            <p>&copy; 2023 Pizza Bubonja's. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier l'utilisateur</title>
+</head>
+<body>
+    <h2>Modifier l'utilisateur</h2>
+    <form action="/edit_user/{{ user.id }}" method="POST">
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" value="{{ user.email }}" required><br><br>
+
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" value=""><br><br>
+
+        <label for="age">Âge :</label>
+        <input type="number" id="age" name="age" value="{{ user.age }}" required><br><br>
+
+        <label for="num_telephone">Numéro de téléphone :</label>
+        <input type="text" id="num_telephone" name="num_telephone" value="{{ user.num_telephone }}"><br><br>
+
+        <button type="submit">Mettre à jour</button>
+    </form>
+</body>
+</html>
