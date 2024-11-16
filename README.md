@@ -1,4 +1,4 @@
-# Pizza Bubonja's
+# Restaurant khouloud
 Python Flask, HTML, CSS, JS / Restaurant website
 <br/><br/><br/>
 
@@ -6,7 +6,7 @@ Pizza Bubonja's is not a real restaurant. This website is part of my portfolio a
 
 Run the following commands in your terminal to run this flask application:
 
-git clone https://github.com/sinisabubonja/pizzabubonjas.git <br/>
+
 python3.6 -m venv pizzabubonjas <br/>
 cd pizzabubonjas <br/>
 source bin/activate<br/>
